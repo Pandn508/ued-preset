@@ -1,0 +1,23 @@
+{
+  "name": "preset-ued",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "unbuild"
+  },
+  "files": [
+    "*.css",
+    "*.d.ts",
+    "dist"
+  ],
+  "keywords": [
+    "presetUed",
+    "uedUI"
+  ],
+  "author": "",
+  "license": "MIT"
+}
