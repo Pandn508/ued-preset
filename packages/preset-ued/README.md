@@ -54,7 +54,7 @@ export default defineConfig({
 
 - ### vertical-align
 
-  > support shortcut <code>w</code> <code>h</code>
+  > support shortcut <code>v-\<value></code> <code>align-\<value></code> <code>vertical-\<value></code>
 
   | Shortcut |      Desc      |
   | :------: | :------------: |
@@ -69,7 +69,7 @@ export default defineConfig({
   | v-60%       | vertical-align:60%;   |
   | v-mid       | vertical-align:middle |
 
-  > enum values Shortcut
+  > enum values shortcut
 
   |  Shortcut   |    Desc     |       |
   | :---------: | :---------: | :---: |
@@ -119,7 +119,7 @@ export default defineConfig({
 
 - ### flex
 
-  > ued border token
+  > set flex properties
 
   |       Class       |          Properties           |       |
   | :---------------: | :---------------------------: | :---: |
@@ -139,7 +139,7 @@ export default defineConfig({
 
 - ### gap
 
-  > ued border token
+  > set gap token
 
   |    Class     |    Properties     |       |
   | :----------: | :---------------: | :---: |
@@ -152,7 +152,7 @@ export default defineConfig({
 
 - ### grid
 
-  > ued border token
+  > set grid token
 
   |                   Class                    |                     Properties                     |       |
   | :----------------------------------------: | :------------------------------------------------: | :---: |
@@ -175,7 +175,8 @@ export default defineConfig({
 
 - ### overflow
 
-  > ued border token
+  > set overflow token
+  > support shortcut <code>overflow-\<value></code>
 
   | Class           | Properties            |
   | :-------------- | :-------------------- |
@@ -191,7 +192,8 @@ export default defineConfig({
 
 - ### position
 
-  > ued border token
+  > set position token
+  > support shortcut <code>position-\<value></code><code>pos-\<value></code>
 
   | Class                     | Properties          |
   | :------------------------ | :------------------ |
@@ -211,7 +213,7 @@ export default defineConfig({
 
 - ### justifies
 
-  > ued border token
+  > set justifies token
 
   | Class           | Properties                      |
   | :-------------- | :------------------------------ |
@@ -316,7 +318,8 @@ export default defineConfig({
 
 - ### width and height
 
-  > support shortcut <code>w</code> <code>h</code>
+  > support shortcut <code>w-\<num[unit]></code> <code>h-\<num[unit]></code>
+  > support <code>wight-\<num[unit]></code>
 
   | Class          | Properties      |
   | :------------- | :-------------- |
@@ -339,12 +342,78 @@ export default defineConfig({
 
   > set margin and padding with direction  
   > this value has <b>negative number</b>  
-  > support shortcut <code>m</code> <code>p</code> <code>m-</code> <code>t</code> <code>r</code> <code>b</code> <code>l</code> <code>x</code> <code>y</code>
+  > support shortcut <code>m-\<directions>-\<num></code>
+  > support shortcut <code>m-\<block|inline>-\<num></code>
+  > support shortcut <code>m-\<bs|be|is|ie>-\<num></code>
 
-  | Class       | Properties                                   |
-  | :---------- | :------------------------------------------- |
-  | m-25        | margin:25px;                                 |
-  | p-25        | padding:25px;                                |
-  | m-m-25      | margin:-25px;                                |
-  | p-x-999vh   | padding-left:999vh;<br/>padding-right:999vh; |
-  | m-l-0.25rem | margin-right:0.25rem;                        |
+  | Class       | Properties            |
+  | :---------- | :-------------------- |
+  | m-25        | margin:25px;          |
+  | p-25        | padding:25px;         |
+  | m-m-25      | margin:-25px;         |
+  | p-x-999vh   | padding-left:999vh;   |
+  | m-l-0.25rem | margin-right:0.25rem; |
+
+  | shortcut |      mean      | desc |
+  | :------: | :------------: | :--- |
+  |    t     |      top       |      |
+  |    r     |     right      |      |
+  |    b     |     bottom     |      |
+  |    l     |      left      |      |
+  |    x     | left and right |      |
+  |    y     | top and bottom |      |
+  |    s     |  inline-start  |      |
+  |    e     |   inline-end   |      |
+  |    bs    |  block-start   |      |
+  |    be    |   block-end    |      |
+  |    is    |  inline-start  |      |
+  |    ie    |   inline-end   |      |
+  
+- ### color and background
+
+  ![alt text](color1.png)
+  ![alt text](color2.png)
+  > support shortcut <code>color-\<type>-\<num></code>
+  > support shortcut <code>bg-background-\<type>-\<num></code>
+
+  > types
+
+  |    type     |     mean     | desc |
+  | :---------: | :----------: | :--- |
+  |   inherit   |   inherit    |      |
+  |   current   | currentColor |      |
+  | transparent | transparent  |      |
+  |    black    |     #000     |      |
+  |    white    |     #fff     |      |
+  |    brand    |    values    |      |
+  |    error    |    values    |      |
+  |  warningM   |    values    |      |
+  |  warningL   |    values    |      |
+  |   success   |    values    |      |
+  |    alarm    |    values    |      |
+  |    gray     |    values    |      |
+
+  > values
+
+  |   values    |             |          |
+  | :---------: | :---------: | :------- |
+  |   \<1-8>    |             |          |
+  |    light    |    hover    | disabled |
+  | transparent | transparent |          |
+  |   normal    |   active    |          |
+
+  > token
+
+  |               token                | mean  | desc |
+  | :--------------------------------: | :---: | :--- |
+  |           color-bg-page            | gray1 |      |
+  |         color-bg-container         | white |      |
+  |    color-bg-secondarycontainer     | gray1 |      |
+  |         color-bg-component         | white |      |
+  |    whcolor-component-borderite     | gray3 |      |
+  |       color-component-border       | gray4 |      |
+  | color-bg-secondarycontainer-hover  | gray2 |      |
+  | color-bg-secondarycontainer-active | gray4 |      |
+  |      color-bg-component-hover      | gray1 |      |
+  |     color-bg-component-actice      | gray3 |      |
+  |    color-bg-component-disabled     | gray2 |      |
