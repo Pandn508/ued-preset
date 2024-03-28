@@ -1,7 +1,7 @@
 import type { Rule, Shortcut, CSSObject } from '@unocss/core';
 
 export const font: Rule[] = [
-  [/^font-(size)-(.+)$/, handleText, { autocomplete: 'text-size-(1600|1200|900|700|600|500|400|350|300)'}],
+  [/^font-(size)-?(.+)$/, handleText, { autocomplete: 'text-size-(1600|1200|900|700|600|500|400|350|300)'}],
   [/^font-(lh)-(.+)$/, handleText, { autocomplete: 'font-line-height-(1800|1400|1100|900|800|700|600|550|500)'}]
 ]
 
@@ -11,19 +11,22 @@ export const fontWeight: Rule[] = [
 ]
 
 function unitNum (str: string) {
+  console.log('✨ ~ file: font.ts:14 ~ str:', str);
   const numberWithUnitRE = /^(-?\d*(?:\.\d+)?)(px|pt|pc|%|r?(?:em|ex|lh|cap|ch|ic)|(?:[sld]?v|cq)(?:[whib]|min|max)|in|cm|mm|rpx)?$/i
   const match = str.match(numberWithUnitRE)
   if (!match) return
   const [, n, unit] = match
   const num = Number.parseFloat(n)
+  console.log('✨ ~ file: font.ts:19 ~ num:', num);
   if (!Number.isNaN(num)) {
     if (num === 0) return '0'
-    if (num < 100) return unit ? `${num }${unit}` : `${num / 4}rem`
+    if (num < 100) return unit ? `${num}${unit}` : `${num / 4}rem`
     else return unit ? `${num / 25}${unit}` : `${num / 100}rem`
   }
 }
 
 function handleText([, d, s]: string[]/*, { theme }: RuleContext<Theme> */): CSSObject | undefined {
+  console.log('✨ ~ file: font.ts:29 ~ d, s:', d, s);
   const v = unitNum(s)
   if (v != null) {
     return {

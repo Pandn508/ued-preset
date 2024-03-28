@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@ued/preset-ued": "workspace:^",
     "@unocss/core": "^0.58.5",
     "@unocss/rule-utils": "^0.58.5",
     "less": "^4.2.0",
-    "preset-ued": "workspace:^",
     "typecript": "0.0.1-security",
     "unbuild": "^2.0.0",
     "unocss": "^0.58.5",

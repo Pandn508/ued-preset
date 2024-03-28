@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@ued/preset-ued':
+        specifier: workspace:^
+        version: link:packages/preset-ued
       '@unocss/core':
         specifier: ^0.58.5
         version: 0.58.5
@@ -17,9 +20,6 @@ importers:
       less:
         specifier: ^4.2.0
         version: 4.2.0
-      preset-ued:
-        specifier: workspace:^
-        version: link:packages/preset-ued
       typecript:
         specifier: 0.0.1-security
         version: 0.0.1-security
@@ -43,9 +43,6 @@ importers:
       '@unocss/preset-rem-to-px':
         specifier: ^0.57.1
         version: 0.57.7
-      preset-ued:
-        specifier: ^1.0.0
-        version: 1.0.0
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
@@ -2517,10 +2514,6 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
-
-  /preset-ued@1.0.0:
-    resolution: {integrity: sha512-Lota0P/zEP1bBmgMYOGNK0L0iQqrTtIJJR6tWMQzFHhzi8Q5s9C+G3MRqO6K1OQy+y7TGj7hV1js5Daid+2rkQ==}
-    dev: false
 
   /pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}

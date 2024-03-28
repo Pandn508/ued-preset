@@ -52,6 +52,56 @@ export default defineConfig({
 
 ## How to use
 
+  
+- ### color and background
+
+  ![alt text](color1.png)
+  ![alt text](color2.png)
+  > support shortcut <code>color-\<type>-\<num></code>
+  > support shortcut <code>bg-background-\<type>-\<num></code>
+
+  > types
+
+  |    type     |     mean     | desc |
+  | :---------: | :----------: | :--- |
+  |   inherit   |   inherit    |      |
+  |   current   | currentColor |      |
+  | transparent | transparent  |      |
+  |    black    |     #000     |      |
+  |    white    |     #fff     |      |
+  |    brand    |    values    |      |
+  |    error    |    values    |      |
+  |  warningM   |    values    |      |
+  |  warningL   |    values    |      |
+  |   success   |    values    |      |
+  |    alarm    |    values    |      |
+  |    gray     |    values    |      |
+
+  > values
+
+  |   values    |             |          |
+  | :---------: | :---------: | :------- |
+  |   \<1-8>    |             |          |
+  |    light    |    hover    | disabled |
+  | transparent | transparent |          |
+  |   normal    |   active    |          |
+
+  > token
+
+  |               token                | mean  | desc |
+  | :--------------------------------: | :---: | :--- |
+  |           color-bg-page            | gray1 |      |
+  |         color-bg-container         | white |      |
+  |    color-bg-secondarycontainer     | gray1 |      |
+  |         color-bg-component         | white |      |
+  |    whcolor-component-borderite     | gray3 |      |
+  |       color-component-border       | gray4 |      |
+  | color-bg-secondarycontainer-hover  | gray2 |      |
+  | color-bg-secondarycontainer-active | gray4 |      |
+  |      color-bg-component-hover      | gray1 |      |
+  |     color-bg-component-actice      | gray3 |      |
+  |    color-bg-component-disabled     | gray2 |      |
+
 - ### vertical-align
 
   > support shortcut <code>v-\<value></code> <code>align-\<value></code> <code>vertical-\<value></code>
@@ -368,52 +418,7 @@ export default defineConfig({
   |    be    |   block-end    |      |
   |    is    |  inline-start  |      |
   |    ie    |   inline-end   |      |
+
+- ### font token
   
-- ### color and background
-
-  ![alt text](color1.png)
-  ![alt text](color2.png)
-  > support shortcut <code>color-\<type>-\<num></code>
-  > support shortcut <code>bg-background-\<type>-\<num></code>
-
-  > types
-
-  |    type     |     mean     | desc |
-  | :---------: | :----------: | :--- |
-  |   inherit   |   inherit    |      |
-  |   current   | currentColor |      |
-  | transparent | transparent  |      |
-  |    black    |     #000     |      |
-  |    white    |     #fff     |      |
-  |    brand    |    values    |      |
-  |    error    |    values    |      |
-  |  warningM   |    values    |      |
-  |  warningL   |    values    |      |
-  |   success   |    values    |      |
-  |    alarm    |    values    |      |
-  |    gray     |    values    |      |
-
-  > values
-
-  |   values    |             |          |
-  | :---------: | :---------: | :------- |
-  |   \<1-8>    |             |          |
-  |    light    |    hover    | disabled |
-  | transparent | transparent |          |
-  |   normal    |   active    |          |
-
-  > token
-
-  |               token                | mean  | desc |
-  | :--------------------------------: | :---: | :--- |
-  |           color-bg-page            | gray1 |      |
-  |         color-bg-container         | white |      |
-  |    color-bg-secondarycontainer     | gray1 |      |
-  |         color-bg-component         | white |      |
-  |    whcolor-component-borderite     | gray3 |      |
-  |       color-component-border       | gray4 |      |
-  | color-bg-secondarycontainer-hover  | gray2 |      |
-  | color-bg-secondarycontainer-active | gray4 |      |
-  |      color-bg-component-hover      | gray1 |      |
-  |     color-bg-component-actice      | gray3 |      |
-  |    color-bg-component-disabled     | gray2 |      |
+  > font style 

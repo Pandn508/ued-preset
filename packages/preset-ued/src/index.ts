@@ -12,7 +12,6 @@ export interface PresetMiniOptions extends PresetOptions {
    *
    * @default 'class'
    */
-  dark?: 'class' | 'media' | DarkModeSelectors
   /**
    * Generate tagged pseudo selector as `[group=""]` instead of `.group`
    *
@@ -48,8 +47,7 @@ export interface PresetMiniOptions extends PresetOptions {
   arbitraryVariants?: boolean
 }
 
-export const presetMini = definePreset((options: PresetMiniOptions = {}) => {
-  options.dark = options.dark ?? 'class'
+export const presetUed = definePreset((options: PresetMiniOptions = {}) => {
   options.attributifyPseudo = options.attributifyPseudo ?? false
   options.preflight = options.preflight ?? true
   options.variablePrefix = options.variablePrefix ?? 'un-'
